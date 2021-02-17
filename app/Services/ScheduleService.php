@@ -69,9 +69,9 @@ class ScheduleService
      */
     public function create(array $data){
 
-        $record = $this->scheduleRepository->checkTime($data);
+        $check = $this->scheduleRepository->checkTime($data);
 
-        if ($record) {
+        if ($check) {
             $create = [
                 'teacher_id' => $data['teacher'],
                 'lesson_id' => $data['lesson'],
